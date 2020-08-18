@@ -1,0 +1,79 @@
+---
+version: 1
+service:
+  name: Shopping Cart Service
+  lifecycle: generally_available
+  tier: tier_1
+  product: Retail Website
+  owner: order_management_team
+  language: Ruby
+  framework: Rails
+  description: Allows users to add/remove products in their virtual shopping carts
+    prior to placing an order.
+  aliases: 
+  tags:
+  - key: db
+    value: mysql
+  - key: kafka-topic
+    value: cart-items
+  repositories:
+  - name: Ezra-s-Demo-and-Salvage/shopping-cart
+    path: "/"
+    provider: github
+  tools:
+  - name: PagerDuty
+    category: incidents
+    url: https://opslevel.pagerduty.com/services/PHW94JT
+    environment: Production
+  - name: Sentry
+    category: errors
+    url: https://sentry.com/dashboard
+    environment: Production
+  - name: Splunk
+    category: logs
+    url: http://www.splunk.com/url
+    environment: 
+  - name: Datadog
+    category: metrics
+    url: https://datadog.com/dashboard
+    environment: 
+  - name: Confluence
+    category: runbooks
+    url: http://ua.atlassian.com/etc
+    environment: 
+  - name: Gremlin
+    category: other
+    url: https://bigriverbooks.gremlin.com/catalog_service
+    environment: 
+  - name: Twistlock
+    category: other
+    url: https://bigriverbooks.twistlock.com/catalog_service
+    environment: 
+  - name: Admin
+    category: admin
+    url: https://catalog.bigriverbooks.com/admin
+    environment: 
+  - name: RDS MySQL
+    category: other
+    url: https://bigriver.amazonaws.com/rds/order_workflow
+    environment: 
+  - name: Kubernetes
+    category: orchestrator
+    url: https://deploy.bigriver.com/catalog
+    environment: 
+  - name: Pingdom
+    category: health_checks
+    url: https://bigriver.pingdom.com/catalog
+    environment: 
+  - name: Sentry
+    category: errors
+    url: https://www.sentry.com/dashboard
+    environment: Staging
+  - name: Confluence
+    category: wiki
+    url: https://gitlab.com/jklabsinc/OpsLevel/wikis/home
+    environment: 
+  - name: Jira
+    category: other
+    url: https://jk.atlassian.net/order-mgmt
+    environment: 
